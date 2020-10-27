@@ -17,7 +17,7 @@ with open('final_prediction.pickle', 'rb') as f:
 #modelfile = 'models/final_prediction.pickle'
 #model = p.load(open(modelfile, 'rb'))
 
-with open('./model_columns.pkl', 'rb') as f:
+with open('model_columns.pkl', 'rb') as f:
    model_columns = pickle.load (f)
 
 
