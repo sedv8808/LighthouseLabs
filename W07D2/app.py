@@ -8,22 +8,17 @@ import pandas as pd
 
 # App definition
 app = Flask(__name__)
-#,template_folder='templates')
 
 # importing models
-# importing models
-with open('final_prediction.pickle', 'rb') as f:
+with open('regressor.pkl', 'rb') as f:
    regressor = pickle.load (f)
-#modelfile = 'models/final_prediction.pickle'
-#model = p.load(open(modelfile, 'rb'))
 
 with open('model_columns.pkl', 'rb') as f:
    model_columns = pickle.load (f)
 
-
 @app.route('/')
 def welcome():
-   return "Flask App about Boston Housing Price Prediction"
+   return "Welcome! Use this Flask App for Boston Housing Price Prediction"
 
 @app.route('/predict', methods=['POST','GET'])
 def predict():
@@ -47,6 +42,7 @@ def predict():
            return jsonify({
                "trace": traceback.format_exc()
                })
+
 
 
 if __name__ == "__main__":
