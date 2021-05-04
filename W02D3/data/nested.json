@@ -5,21 +5,21 @@
          "id":"01",
          "language": "JSON",
          "edition": "first",
-         "author": "Allen"
+         "author": "Jane Doe"
       },
 
       {
          "id":"02",
          "language": "Python",
          "edition": "second",
-         "author": "Aditya Sharma"
+         "author": "Mike"
       }
    ],
 
    "blog":[
    {
-       "name": "Datacamp",
-       "URL":"datacamp.com"
+       "name": "LHL",
+       "URL":"LighthouseLabs.com"
    }
    ]
 }
