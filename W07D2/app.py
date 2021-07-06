@@ -28,7 +28,7 @@ def predict():
 
    if flask.request.method == 'POST':
        try:
-           json_ = 
+           json_ = request.json
            print(json_)
            query_ = pd.get_dummies(pd.DataFrame(json_))
            query = query_.reindex(columns = model_columns, fill_value= 0)
